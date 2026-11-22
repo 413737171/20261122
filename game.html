@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#234f3d" />
+    <title>垃圾分類與減碳配對挑戰 — 綠芽</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <a class="back-link" href="index.html">← 回到聊天</a>
+        <span class="game-eyebrow">綠芽永續小挑戰</span>
+        <h1>垃圾分類與減碳配對挑戰</h1>
+        <p>每題配對一個分類和一個日常小行動。每個配對各得一分，共十分。</p>
+        <p class="local-note">遊戲採常見分類作練習，各地規定可能不同，請以所在地公告為準。</p>
+      </header>
+
+      <section class="game-card" id="gameContent" aria-live="polite" aria-atomic="true"></section>
+      <p class="game-status" id="gameStatus" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>

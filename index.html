@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>綠芽 — 永續生活小顧問</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="綠芽介紹">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="leaf leaf-left"></span>
+            <span class="leaf leaf-right"></span>
+            <span class="stem"></span>
+          </div>
+          <div>
+            <p class="brand-name">綠芽</p>
+            <p class="brand-subtitle">永續生活小顧問</p>
+          </div>
+        </div>
+
+        <section class="welcome-card">
+          <span class="eyebrow">今日小目標</span>
+          <h1>今天也為地球<br />做一點小改變 🌿</h1>
+          <p>不用一次做到完美，選一件輕鬆又持續的事就很好。</p>
+        </section>
+
+        <div class="week-progress">
+          <div class="progress-heading">
+            <span>本週綠色行動</span>
+            <strong>3 / 5</strong>
+          </div>
+          <div class="progress-track" aria-label="本週完成 3 項，共 5 項">
+            <span></span>
+          </div>
+          <p>你已經完成三個小行動！</p>
+        </div>
+      </aside>
+
+      <section class="chat-panel" aria-label="與綠芽對話">
+        <header class="chat-header">
+          <div class="online-avatar" aria-hidden="true">
+            <span class="mini-leaf mini-leaf-left"></span>
+            <span class="mini-leaf mini-leaf-right"></span>
+          </div>
+          <div>
+            <h2>綠芽</h2>
+            <p><span class="status-dot"></span>線上陪伴中</p>
+          </div>
+          <div class="accessibility-tools" role="group" aria-label="顯示與語音設定">
+            <button type="button" id="fontSmaller" aria-label="縮小文字" title="縮小文字">A−</button>
+            <button type="button" id="fontLarger" aria-label="放大文字" title="放大文字">A＋</button>
+            <button type="button" id="contrastToggle" aria-label="切換高對比模式" aria-pressed="false" title="高對比">◐</button>
+            <button type="button" id="autoSpeakToggle" aria-label="切換自動朗讀回覆" aria-pressed="false" title="自動朗讀">🔊</button>
+          </div>
+        </header>
+
+        <div class="chat-messages" id="chatMessages" role="log" aria-label="聊天訊息" aria-live="polite" aria-relevant="additions text">
+          <div class="day-divider"><span>今天</span></div>
+
+          <article class="message-row assistant">
+            <div class="message-avatar" aria-hidden="true">
+              <span class="mini-leaf mini-leaf-left"></span>
+              <span class="mini-leaf mini-leaf-right"></span>
+            </div>
+            <div class="message-stack">
+              <div class="bubble">
+                想一起找找今天最容易開始的減碳小事嗎？
+              </div>
+              <time>09:30</time>
+            </div>
+          </article>
+
+          <div class="quick-chips" aria-label="快速選擇節能與生活主題">
+            <button type="button" data-topic="food">飲食減碳</button>
+            <button type="button" data-topic="electricity">居家節電</button>
+            <button type="button" data-topic="cooling">冷氣省電</button>
+            <button type="button" data-topic="fridge">冰箱省電</button>
+            <button type="button" data-topic="lighting">照明習慣</button>
+            <button type="button" data-topic="standby">待機用電</button>
+            <button type="button" data-topic="laundry">洗衣省電</button>
+            <button type="button" data-topic="disposable">重複使用用品</button>
+            <button type="button" data-topic="transport">綠色交通</button>
+            <button type="button" data-topic="digital_carbon">數位減碳</button>
+            <button type="button" data-topic="pizza_trash">垃圾分類小考</button>
+            <button type="button" data-topic="food_waste">廚餘分類</button>
+            <button type="button" data-topic="dining">外食減碳</button>
+            <button type="button" data-topic="slow_fashion">慢時尚</button>
+            <button type="button" data-topic="recycling">資源回收</button>
+          </div>
+
+        </div>
+
+        <div class="game-launch-row">
+          <button class="game-entry-button" type="button" id="enterGame">
+            <span aria-hidden="true">♻</span>
+            進入遊戲
+          </button>
+          <span class="game-invite" id="gameInvite">聊完天，也歡迎來挑戰遊戲喔！</span>
+          <span class="game-status" id="gameStatus" role="status" aria-live="polite"></span>
+        </div>
+
+        <form class="composer" id="messageForm">
+          <label class="sr-only" for="messageInput">輸入你想問綠芽的問題</label>
+          <div class="composer-main">
+            <button class="voice-button" type="button" id="voiceInput" aria-label="按住說話，鍵盤可按 Enter 開關語音" title="按住說話">
+              <span aria-hidden="true">🎙</span>
+            </button>
+          <input id="messageInput" name="message" type="text" placeholder="輸入你的問題..." autocomplete="off" />
+          <button class="send-button" type="submit" aria-label="送出訊息">
+            <span aria-hidden="true">➤</span>
+          </button>
+          </div>
+          <div class="voice-status" id="voiceStatus" role="status" aria-live="polite">
+            按住麥克風說話；聚焦後按 Enter 開關語音
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
